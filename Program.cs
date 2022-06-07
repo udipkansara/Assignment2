@@ -12,60 +12,60 @@ namespace Assignment2
         {
             try
             {
-                // Defining the varialbes
+                // variables
                 int input = 0;
                 int length;
                 int width;
 
-                // Asking for the input of length
+                // ask user to enter the length
                 Console.WriteLine("Please enter the length of the rectangle: ");
 
-                // Error checking the length for integer and greater than zero
+                // validating input that user must have to enter greater than 0
                 while ((!int.TryParse(Console.ReadLine(), out length)) || length <= 0)
                 {
-                    Console.WriteLine("Please Enter a valid integer value and greater than 0!");
+                    Console.WriteLine("Oops! Please Enter integer value and also greater 0 :)");
                 }
 
-                // Asking for the input of width
+                // ask user to enter width
                 Console.Write("Please enter the width of the rectangle: ");
 
-                // Error checking the width for integer and greater than zero
+                // validating input that user must have to enter greater than 0
                 while ((!int.TryParse(Console.ReadLine(), out width)) || width <= 0)
                 {
-                    Console.Write("Please Enter a valid integer value and greater than 0!");
+                    Console.Write("Oops! Please Enter integer value and also greater 0 :)");
                 }
 
                 do
                 {
-                    // Displaying the menu items untils user wishes to exit
+                    // Showing Menu items
                     input = ShowMenu();
 
-                    // Initializing the rectangle class
+                    // Initializing the Rectangle class
                     Rectangle rectangle = new Rectangle();
                     rectangle.SetLength(length);
                     rectangle.GetWidth();
                     rectangle.SetWidth(width);
 
-                    // Displaying the length
+                    // display length of rectangle
                     if (input == 1)
                     {
                         Console.Write("The length of rectangle is: ");
                         Console.WriteLine(rectangle.GetLength());
                     }
 
-                    // Changing the length
+                    // Changing the length of rectangle
                     else if (input == 2)
                     {
                         Console.Write("Please enter the length of the rectangle: ");
 
-                        // Error checking the length for integer and greater than zero
+                        // validating input that user must have to enter greater than 0
                         while ((!int.TryParse(Console.ReadLine(), out length)) || length <= 0)
                         {
-                            Console.WriteLine("Please Enter a valid integer value and greater than 0!");
+                            Console.WriteLine("Oops! Please Enter integer value and also greater 0 :)");
                         }
                     }
 
-                    // Displaying the width
+                    // display width of rectangle
                     else if (input == 3)
                     {
                         Console.Write("The width of rectangle is: ");
@@ -75,35 +75,35 @@ namespace Assignment2
                     {
                         Console.Write("Please enter the width of the rectangle: ");
 
-                        // Error checking the width for integer and greater than zero
+                        // validating input that user must have to enter greater than 0
                         while ((!int.TryParse(Console.ReadLine(), out width)) || width <= 0)
                         {
-                            Console.WriteLine("Please Enter a valid integer value and greater than 0!");
+                            Console.WriteLine("Oops! Please Enter integer value and also greater 0 :)");
                         }
                     }
 
-                    // Displaying the perimeter
+                    // display the perimeter of rectangle
                     else if (input == 5)
                     {
                         Console.Write("The perimeter of rectangle is: ");
                         Console.WriteLine(rectangle.GetPerimeter());
                     }
 
-                    // Displaying the Area
+                    // display the Area  of rectangle
                     else if (input == 6)
                     {
                         Console.Write("The area of rectangle is: ");
                         Console.WriteLine(rectangle.GetArea());
                     }
 
-                    // Exit
+                    // Exiting user from applicaton
                     else if (input == 7)
                     {
                         Environment.Exit(0);
                     }
                 }
                 while (input < 7);
-                Console.WriteLine("Enter valid option");
+                Console.WriteLine("Please Enter a valid option!!");
                 ShowMenu();
             }
 
@@ -116,7 +116,7 @@ namespace Assignment2
         public static int ShowMenu()
         {
             Console.Write("\n\n");
-            Console.Write("---------------------------Menu-------------------------\n");
+            Console.Write("---------------------------------\n");
             Console.Write("1. Get Rectangle Length\n");
             Console.Write("2. Change Rectangle Length\n");
             Console.Write("3. Get Rectangle Width\n");
@@ -124,9 +124,10 @@ namespace Assignment2
             Console.Write("5. Get Rectangle Perimeter\n");
             Console.Write("6. Get Rectangle Area\n");
             Console.Write("7. Exit\n");
+            Console.Write("---------------------------------\n");
             return int.Parse(Console.ReadLine());
         }
     }
         
-    }
 }
+
