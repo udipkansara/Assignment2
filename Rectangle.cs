@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment2.Properties
+namespace Assignment2
 {
-    internal class Rectangle
+    public class Rectangle
     {
-
         private int length { get; set; }
         private int width { get; set; }
 
@@ -60,7 +59,5 @@ namespace Assignment2.Properties
             int area = length * width;
             return area;
         }
-
     }
-      
 }
